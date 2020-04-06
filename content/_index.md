@@ -1,7 +1,6 @@
 +++
 title = "Goldydocs"
 linkTitle = "Goldydocs"
-
 +++
 
 {{< blocks/cover title="人生の折り返し地点で、会社を設立するということ" image_anchor="top" height="full" color="orange" >}}
@@ -11,15 +10,6 @@ linkTitle = "Goldydocs"
 	{{< blocks/link-down color="info" >}}
 </div>
 {{< /blocks/cover >}}
-
-
-{{< blocks/section >}}
-
-<div class="col-12">
-<h1 class="text-center">お知らせ</h1>
-</div>
-
-{{< /blocks/section >}}
 
 
 {{< blocks/section >}}
@@ -43,9 +33,23 @@ WEBのデザイン・メインビジュアルの作成
 
 
 {{< blocks/section >}}
-
 <div class="col-12">
-<h1 class="text-center">This is another Section</h1>
+<h1 class="text-center">Blog</h1>
 </div>
+{{< /blocks/section >}}
+
+
+{{< blocks/section >}}
+
+{{% blocks/aboutus %}}
+<h1 class="text-center">会社概要</h1>
+<div class="mx-auto lead mt-3">
+	<p>社名：合同会社キクダイ</p>
+	<p>代表社員（社長）：菊池大地</p>
+	<p>設立：2016年6月16日（平成28年）</p>
+	<p>所在地：東京都日野市豊田3丁目</p>
+	<p><a href="https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=5012803001458" target="_blank">合同会社キクダイの情報｜国税庁法人番号公表サイト</a></p>
+</div>
+{{% /blocks/aboutus %}}
 
 {{< /blocks/section >}}

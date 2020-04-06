@@ -1,9 +1,11 @@
 ---
-title: "1番目 news title"
-linkTitle: "1番目 news linkTitle"
-date: 2020-04-01
+title: "works title"
+linkTitle: "works linkTitle"
+date: 2020-04-06
 description: >
   1番目ニュース、ディスクリプション。
+icon:
+content_url:
 ---
 
 1番目のニュース。contents.
