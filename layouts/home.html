@@ -4,19 +4,16 @@
 {{ end }}
 {{ end }}
 
-{{ define "news" -}}
-{{ $height := "auto"  }}
+{{ define "news" }}
 {{ $type   := "news" }}
 <a id="td-block-5" class="td-offset-anchor"></a>
-<section class="row td-box td-box--5 td-box--gradient td-box--height-{{ $height }}">
+<section class="row td-box td-box--5 td-box--gradient td-box--height-auto">
 	<div class="col">
 		<div class="row {{ $type }}">
 			<div class="col-12">
 				<h2 class="text-center">News</h2>
 				<ul class="list-unstyled">
-					{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-		      {{ $paginator := .Paginate (where $pages "Section" "news") }}
-		      {{ range $paginator.Pages }}
+					{{ range where .Paginator.Pages "Type" "news" }}
 			 		<li title="User mailing list">
 						{{ dateFormat "2006/01/02" .Date }} {{ if .Draft }}<sup class="draft-label">DRAFT</sup>{{ end }}
 						<span class="description">
@@ -36,22 +33,21 @@
 		</div>
 	</div>
 </section>
-{{- end }}
+{{ end }}
 
-{{ define "works" -}}
-{{ $height := "auto"  }}
+{{ define "works" }}
 {{ $type   := "works" }}
 <a id="td-block-6" class="td-offset-anchor"></a>
-<section class="row td-box td-box--6 td-box--gradient td-box--height-{{ $height }}">
+<section class="row td-box td-box--6 td-box--gradient td-box--height-auto">
 	<div class="col">
 		<div class="row {{ $type }}">
-			<div class="col-12">
-		      {{ $paginator := .Paginate (where $.Site.RegularPages "Section" "works") }}
-		      {{ range $paginator.Pages }}
-						{{ partial "feature.html" . }}
-      		{{ end }}
-			</div>
+			{{ range where .Paginator.Pages "Type" "works" }}
+				{{ partial "feature.html" . }}
+    	{{ end }}
 		</div>
 	</div>
 </section>
-{{- end }}
+{{ end }}
+
+{{ define "about-us" }}
+{{ end }}

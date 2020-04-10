@@ -98,8 +98,6 @@ algolia_docsearch = false
 # Enable Lunr.js offline search
 offlineSearch = false
 
-mainSections = ["news", "works", "blog"]
-
 [params.blog]
 	title = "ブログ"
 	leftimg = "./img/daichi-blog.png"

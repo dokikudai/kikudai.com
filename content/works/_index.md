@@ -1,5 +1,5 @@
 ---
-title: "News About kikudai"
+title: "works About kikudai"
 linkTitle: "Works"
 url : "./#td-block-2"
 menu:
