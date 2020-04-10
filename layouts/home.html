@@ -6,10 +6,10 @@
 
 {{ define "news" }}
 {{ $type   := "news" }}
-<a id="td-block-5" class="td-offset-anchor"></a>
-<section class="row td-box td-box--5 td-box--gradient td-box--height-auto">
+<a id="td-block-1" class="td-offset-anchor"></a>
+<section class="row td-box td-box--3 td-box--gradient td-box--height-auto">
 	<div class="col">
-		<div class="row {{ $type }}">
+		<div class="row {{ $type }} feature">
 			<div class="col-12">
 				<h2 class="text-center">News</h2>
 				<ul class="list-unstyled">
@@ -37,12 +37,27 @@
 
 {{ define "works" }}
 {{ $type   := "works" }}
-<a id="td-block-6" class="td-offset-anchor"></a>
-<section class="row td-box td-box--6 td-box--gradient td-box--height-auto">
+<a id="td-block-2" class="td-offset-anchor"></a>
+<section class="row td-box td-box--1 td-box--gradient td-box--height-auto">
 	<div class="col">
 		<div class="row {{ $type }}">
 			{{ range where .Paginator.Pages "Type" "works" }}
-				{{ partial "feature.html" . }}
+				{{ partial "feature-3row.html" . }}
+    	{{ end }}
+		</div>
+	</div>
+</section>
+{{ end }}
+
+{{ define "blog" }}
+{{ $type   := "blog" }}
+<a id="td-block-3" class="td-offset-anchor"></a>
+<section class="row td-box td-box--6 td-box--gradient td-box--height-auto">
+	<div class="col">
+		<div class="row {{ $type }} feature">
+			<h2 class="col-12 mb-5 text-center">blog</h2>
+			{{ range where .Paginator.Pages "Type" "blog" }}
+				{{ partial "feature-img-2row.html" . }}
     	{{ end }}
 		</div>
 	</div>
@@ -50,4 +65,18 @@
 {{ end }}
 
 {{ define "about-us" }}
+{{ $type   := "about-us" }}
+<a id="td-block-4" class="td-offset-anchor"></a>
+<section class="row td-box td-box--7 td-box--gradient td-box--height-auto">
+	<div class="col">
+		<div class="row {{ $type }} feature">
+			<div class="col-12 table table--extend">
+			{{ with .Site.GetPage "/about-us" }}
+				<h2 class="text-center">{{ .Params.title  }}</h2>
+				{{ .Content | markdownify }}
+			{{ end }}
+			</div>
+		</div>
+	</div>
+</section>
 {{ end }}
