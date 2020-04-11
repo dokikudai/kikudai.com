@@ -1,6 +1,6 @@
 
 ---
-title: "News About kikudai"
+title: "News"
 linkTitle: "News"
 url : "./#td-block-1"
 menu:

@@ -2,7 +2,6 @@
 title: "Contact"
 linkTitle: "お問い合わせ"
 ---
-
 <section id="contact">
     <div class="container">
         <div class="row">

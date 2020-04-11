@@ -5,7 +5,16 @@
 }
 
 .row.news h2 {
-  margin-bottom: 8%;
+  margin-bottom: 5%;
+}
+
+.news ul li .description {
+  padding-left: 1.5%;
+}
+
+.list-group-item--extend {
+  background-color: unset;
+  border: unset;
 }
 
 .row.blog.feature {
