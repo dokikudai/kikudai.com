@@ -1,6 +1,5 @@
 +++
-title = "Goldydocs"
-linkTitle = "Goldydocs"
+title = "kikudai"
 +++
 
 {{< blocks/cover title="人生の折り返し地点で、会社を設立するということ" image_anchor="top" height="full" color="orange" >}}
@@ -10,3 +9,4 @@ linkTitle = "Goldydocs"
 	{{< blocks/link-down color="info" >}}
 </div>
 {{< /blocks/cover >}}
+	
