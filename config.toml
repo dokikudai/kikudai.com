@@ -1,135 +1,107 @@
 # Site settings
-baseurl = "https://kikudai.com/"
-languageCode = "ja"
+baseurl = "/"
 title = "合同会社キクダイ | kikudai"
-theme = "hugo-freelancer-theme"
 
+hasCJKLanguage = true
+
+enableRobotsTXT = true
+
+# Hugo allows theme composition (and inheritance). The precedence is from left to right.
+theme = ["docsy"]
+
+# Will give values to .Lastmod etc.
+enableGitInfo = false
+
+# Language settings
+contentDir = "content/ja"
+defaultContentLanguage = "ja"
+#defaultContentLanguageInSubdir = false
+# Useful when translating.
+#enableMissingTranslationPlaceholders = true
+
+#disableKinds = ["taxonomy", "taxonomyTerm"]
+
+# Highlighting config
+pygmentsCodeFences = true
+pygmentsUseClasses = false
+# Use the new Chroma Go highlighter in Hugo.
+pygmentsUseClassic = false
+#pygmentsOptions = "linenos=table"
+# See https://help.farbox.com/pygments.html
+pygmentsStyle = "tango"
+
+# Configure how URLs look like per section.
+[permalinks]
+blog = "/:section/:year/:month/:day/:slug/"
+
+## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
+[blackfriday]
+plainIDAnchors = true
+hrefTargetBlank = true
+angledQuotes = false
+latexDashes = true
+
+# Image processing configuration.
+[imaging]
+resampleFilter = "CatmullRom"
+quality = 75
+anchor = "smart"
+
+[services]
+[services.googleAnalytics]
+# Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
+id = "UA-00000000-0"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [params]
+customCSS = ["/css/docsy-kikudai.css"]
 
-	# You can use Markdown syntax for urls [text](//url.to/source) for
-	# most longer texts.
+copyright = "Kikudai"
+#privacy_policy = "https://policies.google.com/privacy"
 
-	# To provide some metadata for search engines feel free to add a few
-	# information about you and your website.
-	name = "合同会社キクダイ"
-	description = "合同会社キクダイの自社ホームページ。"
+# First one is picked as the Twitter card image if not set on page.
+# images = ["images/project-illustration.png"]
 
-	# Since this template is static, the contact form uses www.formspree.io as a
-	# proxy. The form makes a POST request to their servers to send the actual
-	# email. Visitors can send up to a 1000 emails each month for free.
-	#
-	# What you need to do for the setup?
-	#
-	# - set your email address under 'email' below
-	# - upload the generated site to your server
-	# - send a dummy email youself to confirm your account
-	# - click the confirm link in the email from www.formspree.io
-	# - you're done. Happy mailing!
-	email = "contact@kikudai.com"
+# Menu title if your navbar has a versions selector to access old versions of your site.
+# This menu appears only if you have at least one [params.versions] set.
+version_menu = "Releases"
 
-	# Custom assets
-	custom_css = ["./css/freelancer-kikudai.css"]
-	custom_js  = ["//assets.tumblr.com/post.js"]
+# Flag used in the "version-banner" partial to decide whether to display a
+# banner on every page indicating that this is an archived version of the docs.
+# Set this flag to "true" if you want to display the banner.
+archived_version = false
 
-	[params.navigation]
-		brand = "Kikudai"
-    brandlogo = "./img/kikudai-logo.png"
+# The version number for the version of the docs represented in this doc set.
+# Used in the "version-banner" partial to display a version number for the
+# current doc set.
+#version = "0.0"
 
+# A link to latest version of the docs. Used in the "version-banner" partial to
+# point people to the main doc site.
+#url_latest_version = "https://example.com"
 
-	[params.header]
-		# Copy your own image into './static/img/'' if you wish
-		image = "kikudai.png"
-		name = "Kikudai"
-		subtitle = "人生の折り返し地点で、会社を設立するということ。"
+# Repository configuration (URLs for in-page links to opening issues and suggesting changes)
+github_repo = "https://github.com/dokikudai/kikudai.com"
+# An optional link to a related project repo. For example, the sibling repository where your product code lives.
+#github_project_repo = "https://github.com/google/docsy"
 
+# Google Custom Search Engine ID. Remove or comment out to disable search.
+gcs_engine_id = "013026302092570058925:63neuckitfb"
 
-	[params.concept]
-		title = "大切にすること"
-		# The about text is splitted into a left and right column
-		left = "家庭（プライベート）、仕事、お金のバランスを考えること。"
-		right = "ご近所、地域、ふるさとを考えた活動。"
+# Enable Algolia DocSearch
+algolia_docsearch = false
 
+# Enable Lunr.js offline search
+offlineSearch = false
 
-	[params.news]
-		# All projects defined in their own files. You can find example projects
-		# at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
-		# at the root of this Hugo site.
-		# For more informtion take a look at the README.
-		title = "お知らせ"
-
-		[params.news.modal]
-			client = "Client"
-			date = "Date"
-			category = "Category"
-			buttontext = "Close"
-
-
-	[params.portfolio]
-		# All projects defined in their own files. You can find example projects
-		# at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
-		# at the root of this Hugo site.
-		# For more informtion take a look at the README.
-		title = "仕事について"
-
-		[params.portfolio.modal]
-			client = "Client"
-			date = "Date"
-			category = "Category"
-			buttontext = "Close"
-
-
-	[params.contact]
-		title = "お問い合わせ"
-
-		# 'error' defines error messages for invalid inputs
-		[params.contact.form.name]
-			text = "お名前"
-			error = "Please enter your name."
-
-		[params.contact.form.email]
-			text = "メールアドレス"
-			error = "Please enter your email address."
-
-		[params.contact.form.phone]
-			text = "TEL"
-			error = "Please enter your phone number."
-
-		[params.contact.form.message]
-			text = "お問い合わせ内容"
-			error = "Please enter a message."
-
-		[params.contact.form.attention]
-			text = "※入力していただいた個人情報は、お問い合わせ以外の目的で使用いたしません。 "
-
-		[params.contact.form.button]
-			text = "送信"
-
-
-		[params.blog]
-			title = "ブログ"
-			leftimg = "./img/daichi-blog.png"
-			leftlink = "http://blog.kikudai.com/"
-			rightimg = "./img/sachico-blog.png"
-			rightlink = "https://www.sachicodesign.com/"
-
-
-		[params.footer.about]
-			title = "会社について"
-			etc = "設立 2016年6月"
-
-		[params.footer.company]
-			title = "合同会社キクダイ"
-			president = "社長 菊池大地"
-
-		[params.footer.location]
-			title = "所在地"
-			address = "東京都 日野市 豊田3"
-
-
-	[params.footer]
-		copyright = "Cloned [hugo-freelancer-theme](//github.com/digitalcraftsman/hugo-freelancer-theme). Powered by [Hugo](//gohugo.io).<br>(c)2016 Kikudai."
-
-		[params.footer.credits]
-			title = "About Freelancer"
-			text = "Freelance is a free to use, open source Bootstrap theme created by [Start Bootstrap](//startbootstrap.com)."
+[params.links]
+# End user relevant links. These will show up on left side of footer and in the community page if you have one.
+  [[params.links.user]]
+  	name = "お問い合わせ"
+    url = "/contact/"
+    icon = "fa fa-envelope"
+      desc = "Discussion and help from your fellow users"
