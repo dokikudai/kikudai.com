@@ -1,10 +1,10 @@
 ---
-title: "works About kikudai"
+title: "Works"
 linkTitle: "Works"
-url : "./#td-block-2"
+anchorId: "td-block-2"
 menu:
   main:
-    weight: 10
+    weight: 20
 icon:
 content_url:
 ---
