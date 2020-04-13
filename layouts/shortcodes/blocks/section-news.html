@@ -1,0 +1,11 @@
+<div class="recent-posts section">
+  <div class="posts">
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $paginator := $.Page.Site.Params.Paginate (where $pages "Params.hidden" "ne" true) }}
+    {{ range $paginator.Pages }}
+      <div class="post">
+        a
+      </div>
+    {{ end }}
+  </div>
+</div>
