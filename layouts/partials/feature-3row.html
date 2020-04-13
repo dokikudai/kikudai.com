@@ -1,0 +1,8 @@
+<div class="col-lg-4 mb-5 mb-lg-0 text-center ">
+  <div class="mb-4 h1">
+    <i class="{{ if not (or (hasPrefix .Params.icon "fas ") (hasPrefix .Params.icon "fab ")) }}fas {{ end }}{{ .Params.icon }}"></i>
+  </div>
+  <h4 class="h3">{{ .Params.title | markdownify }}</h4>
+  <p class="mb-0">{{ .Content | markdownify }}</p>
+  {{ with .Params.url }}<p><a href="{{ . }}">{{ with .Params.content_url }}{{ . }}{{ else }}{{ T "ui_read_more" }}{{ end }} …</a></p>{{ end }}
+</div>

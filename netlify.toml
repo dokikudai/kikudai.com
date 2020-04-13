@@ -1,0 +1,7 @@
+[build]
+publish = "public"
+command = "git submodule update -f --init && npm install postcss-cli"
+
+[build.environment]
+HUGO_VERSION = "0.69.0"
+HUGO_ENV = "production"
