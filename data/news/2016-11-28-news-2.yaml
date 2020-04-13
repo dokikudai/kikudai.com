@@ -1,0 +1,5 @@
+modalID: 2
+title: ホームページリニューアル
+date: 2016/11/28
+clientLink: "#"
+description: <p>自社ホームページをリニューアルをしました。</p><p>Hugo（静的サイトジェネレーター）にて構築しています。<br>また、Amazon S3の静的Webサイトホスティング、AWS Certificate ManagerとClaudFrontによる無料SSLを利用しております。</p>

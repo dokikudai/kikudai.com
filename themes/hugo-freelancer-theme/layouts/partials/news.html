@@ -1,0 +1,20 @@
+{{ "<!-- News Section -->" | safeHTML }}
+<section class="success" id="news">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>{{ with .Site.Params.news.title }}{{.}}{{end}}</h2>
+				<hr class="star-light">
+			</div>
+		</div>
+		<div class="row">
+			{{ range $.Site.Data.news }}
+			<div class="col-lg-12 news-item center-block">
+				<p><a href="#newsModal{{ .modalID }}" class="news-link" data-toggle="modal">
+					<span class="news-date">{{ .date }}</span><span class="news-title">{{ .title }}</span>
+				</a></p>
+			</div>
+			{{ end }}
+		</div>
+	</div>
+</section>
