@@ -1,0 +1,9 @@
+### hugo
+
+# hugo 
+public/
+resources/
+
+# Node package manager
+node_modules/
+package-lock.json
